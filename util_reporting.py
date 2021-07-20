@@ -93,7 +93,7 @@ def countplot_viz(
     rotation=45,
     figsize_x=12,
     figsize_y=5,
-    palette="mako",
+    palette="viridis",
 ):
     """
     This function gets a Python Pandas dataframe and visualize a countplot.
@@ -188,7 +188,7 @@ def countplot_pointplot_viz(
     rotation=45,
     figsize_x=12,
     figsize_y=5,
-    palette="mako",
+    palette="viridis",
 ):
     """
     This function gets a Python Pandas dataframe and visualize a countplot and a pointplot.
@@ -238,7 +238,7 @@ def countplot_pointplot_viz(
 
 
 
-def crosstab_viz(data, index_column_1, index_column_2, aggregated_column, cmap="mako"):
+def crosstab_viz(data, index_column_1, index_column_2, aggregated_column, cmap="viridis"):
     """
     This function gets a Python Pandas dataframe and visualize a crosstab.
     :param data: Dataframe to be analyze
@@ -303,7 +303,7 @@ def swarmplot_viz(
     title,
     fontsize=15,
     fontsize_title=17,
-    palette="mako",
+    palette="viridis",
 ):
     """
     This function gets a Python Pandas dataframe and visualize a swarmplot for 2 column by a grouping column.
@@ -340,7 +340,7 @@ def boxplot_viz(
     fontsize_label=16,
     fontsize_title=20,
     rotation=45,
-    palette="mako",
+    palette="viridis",
 ):
     """
     This function gets a Python Pandas dataframe and visualize a countplot.
@@ -561,5 +561,5 @@ def correlation_chart(df, column_list):
     """
     plt.figure(figsize=(12, 8))
     plt.title("Correlation of Features for Data Frame")
-    sns.heatmap(df[column_list].corr(), vmax=1.0, annot=True, cmap="mako")
+    sns.heatmap(df[column_list].corr(), vmax=1.0, annot=True, cmap="viridis")
     plt.show()

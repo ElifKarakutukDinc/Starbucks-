@@ -3,12 +3,13 @@ import numpy as np
 import datetime 
 
 
-def calculating_zscore(df, cols):
+def calculating_zscore(df, cols,number):
     """
     This function gets a Python Pandas dataframe and calculating z score for column list and creating new column to show outlier and non-outlier values as categorical. 
     :param df: Dataframe to be analyze
     :param cols: The column list for calculating zscore.
     :return: Returning Python Pandas dataframe.
+    :number: Confidence interval for calculating Z score. 
     """
     try:
         df_dummy = df.copy()
@@ -22,8 +23,8 @@ def calculating_zscore(df, cols):
         
             df_dummy[col_zscore_outlier] = np.where(
         (
-            (df_dummy[col_zscore] > 3)
-            | (df_dummy[col_zscore] < -3)
+            (df_dummy[col_zscore] > number)
+            | (df_dummy[col_zscore] < -number)
         ),
         "outlier",
         "non-outlier",
