@@ -504,6 +504,7 @@ def distplot_viz(
         kde=True,
         kde_kws={"shade": True, "linewidth": 3},
         label=label1,
+        color=color1,
     )
     sns.distplot(
         data[data[separate_column] == condition_2][column],
@@ -511,6 +512,7 @@ def distplot_viz(
         kde=True,
         kde_kws={"shade": True, "linewidth": 3},
         label=label2,
+        color=color2,
     )
     plt.title(title, fontsize=17)
     plt.xlabel(column, fontsize=15)
